@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>MyBodyTime</title> 
+</head>
+
+ 
+<body>
+
+<header> 
+    <a class="logo">MyBodyTime</a>
+          
+        
+
+</header> 
+
+<div class="tab">
+
+  <button class="tablinks" onclick="openCity(event, 'content')" id="defaultOpen">Главная</button>
+  <button class="tablinks" onclick="openCity(event, 'IMT')">Рассчитать ИМТ</button>
+  <button class="tablinks" onclick="openCity(event, 'diary')">Дневник</button>
+  <button class="tablinks" onclick="openCity(event, 'recipes')">Рецепты</button>
+</div>
+
+<div id="content" class="tabcontent">
+  <div class="home">
+  <p>  <img src="https://thumbs.dreamstime.com/b/%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%B1%D0%B5%D0%B3%D1%83%D0%BD-%D1%81%D0%BF%D0%BE%D1%80%D1%82%D1%81%D0%BC%D0%B5%D0%BD%D0%B0-%D0%BE%D0%B4%D0%B8%D0%BD-%D0%BD%D0%B5%D0%BF%D1%80%D0%B5%D1%80%D1%8B%D0%B2%D0%BD%D1%8B%D0%B9-%D1%80%D0%B8%D1%81%D1%83%D0%BD%D0%BE%D0%BA-178646222.jpg"
+    alt="Фон главной страницы" width="250" height="272" class="rightpic">
+    <img src="https://png.pngtree.com/png-vector/20190727/ourlarge/pngtree-continuous-line-drawing-of-yoga-aerobic-girl-minimalism-design-sport-theme-png-image_1636887.jpg"
+    alt="Фон главной страницы" width="250" height="272" class="rightpic">
+    <img src="https://png.pngtree.com/png-vector/20191206/ourlarge/pngtree-continuous-one-line-drawing-of-yoga-girl-woman-standing-with-one-png-image_2070456.jpg"
+    alt="Фон главной страницы" width="250" height="272" class="rightpic">
+<h1>MyBodyTime</h1>- это приложение для контроля за весом. Здесь вы можете узнать основную информацию, касательно вашего индекса массы тела, рассчитать его и посмотреть рекоммендации. 
+Во вкладке "дневник" вы можете записывать и отмечать свои планы. Допустим, провести тренировку в среду. В разделе "рецепты", можете ознакомится с диетическими рецепатми, которые помогут вам держать себя в форме.
+</p>
+</div></div>
+
+
+<div id="IMT" class="tabcontent">
+<div class="block" >
+<div class="block-header">
+<span>Рассчитать индекс массы тела<br> (ИМТ):</span>
+                </div>
+
+
+<div class="sex">
+<span>Выбирете ваш пол:</span><br>
+<button id="wsex">Женский</button>
+<button id="msex">Мужской</button>
+
+</div>
+
+            <div class="cell">
+                <span>Рост</span>
+                <input type="number" id="input-h">
+            </div>
+            <div class="cell">
+                <span>Вес</span>
+                <input type="number" id="input-w">
+            </div>
+            <div class="cell">
+                <span>Возраст</span>
+                <input type="number" id="input-age">
+       
+            </div>
+
+                    <div class="cell">
+                <span>ИМТ</span>
+                <div id="result1"></div> 
+            </div>
+            <div class="cell">
+                <span>Итог</span>
+                <div id="result2"></div> 
+            </div>
+            <div class="cell">
+                <span>Идеальный вес</span>
+                <div id="result3"></div>  
+                
+</div> 
+<div class="water">
+  <span></span>
+  <div id="result4"></div> 
+
+             </div>
+             <div id="imgInf1"><img src="https://thumbs.dreamstime.com/b/%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%B1%D0%B5%D0%B3%D1%83%D0%BD-%D1%81%D0%BF%D0%BE%D1%80%D1%82%D1%81%D0%BC%D0%B5%D0%BD%D0%B0-%D0%BE%D0%B4%D0%B8%D0%BD-%D0%BD%D0%B5%D0%BF%D1%80%D0%B5%D1%80%D1%8B%D0%B2%D0%BD%D1%8B%D0%B9-%D1%80%D0%B8%D1%81%D1%83%D0%BD%D0%BE%D0%BA-178646222.jpg"
+              alt="Фон главной страницы" width="350" height="272" class="rightpic"></div>
+    
+    </div> </div>
+  
+    
+    <div id="diary" class="tabcontent">
+
+    <div class="diary_block" id="b">
+        <div class="diary_header">
+           <h1>Мои цели</h1>
+            <input type="checkbox" id="pseudoBtn">
+        </div>
+ 
+     <div class="add_diary">
+         <div class="input_diary"></div>
+         <input time ="text" id="food">
+        </div>
+        <div class="button_diary">
+            <button id="add_food_btn">Добавить</button>
+        </div>
+    
+        <div class="add_food">
+    
+                </div>
+
+     </div>
+    
+    </div>
+     <button class="open-button" onclick="openForm()">Обратная связь</button>
+  <div class="container" id="btn_form">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Адрес</div>
+          <div class="text-one">г. Минск</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Телефон</div>
+          <div class="text-one">+375(29) 777 22 22</div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one">support@mail.ru</div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Форма обратной связи</div>
+        <p>
+         Если вы хотите задать вопрос, либо внести замечание/предложение, заполните форму ниже
+        </p>
+        <form action="sendForm.php" id="form" name="form" method="post">
+          <div class="input-box">
+            <input type="text" placeholder="Ваше имя" id="name" name="name" data-reg="^[А-ЯЁ][а-яё]*$" />
+          <label for="name">На русском </label></div>
+          <div class="input-box">
+            <input type="text" placeholder="Введите email" id="email" name="email" data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" />
+            <label for="email">Пример:123@mail.ru </label>
+          </div>
+           
+          <div class="input-box message-box">
+            <textarea placeholder="Сообщение"></textarea>
+          </div>
+          <div class="button">
+            <input type="submit" value="Отправить" id="button", name="button">
+            <button type="button" class="btn_cancel" onclick="closeForm()">Закрыть</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+    <script src="./script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script type="module">
+       
+      
+      </script>
+</body>
+
+</html>
+
+
+
+
+  
